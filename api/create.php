@@ -20,7 +20,7 @@
     $item->age = $data->age;
     
     if($item->createEmployee()){
-        echo 'Employee created successfully.';
+        echo json_encode($data);
     } else{
         echo 'Employee could not be created.';
     }

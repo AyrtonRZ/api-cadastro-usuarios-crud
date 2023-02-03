@@ -23,7 +23,7 @@
     $item->age = $data->age;
     
     if($item->updateEmployee()){
-        echo json_encode("Employee data updated.");
+        echo json_encode($data);
     } else{
         echo json_encode("Data could not be updated");
     }

@@ -14,7 +14,7 @@
     $item = new Employee($db);
 
     $item->id = isset($_GET['id']) ? $_GET['id'] : die();
-  
+
     $item->getSingleEmployee();
 
     if($item->name != null){
@@ -24,12 +24,10 @@
             "name" => $item->name,
             "email" => $item->email,
             "age" => $item->age,
-        );
-      
+        );    
         http_response_code(200);
         echo json_encode($emp_arr);
-    }
-      
+    }  
     else{
         http_response_code(404);
         echo json_encode("Employee not found.");
